@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mind Miners CMPE 280: Project">
+    <meta name="Priyanka Karpe" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Word_Cloud</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />    
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <style type="text/css">
+			.wordcloud {
+				border: 1px solid #036;
+				height: 7in;
+				margin: 0.5in auto;
+				padding: 0;
+				page-break-after: always;
+				page-break-inside: avoid;
+				width: 7in;
+			}
+	</style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <!--[endif]-->
+    
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index" class="logo">Creative <span class="lite">Minds</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+				
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="img/avatar1_small.jpg">
+                            </span>
+                            <span class="username">Creative Minds Admin</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="profile"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a href="error"><i class="icon_mail_alt"></i> My Inbox</a>
+                            </li>
+                            <li>
+                                <a href="error"><i class="icon_chat_alt"></i> Chats</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href="index">
+                          <i class="icon_house_alt"></i>
+                          <span>index</span>
+                      </a>
+                  </li>
+				  <li>
+				  	<a class="" href="word_cloud">
+                      <i class="icon_cloud_alt"></i>
+                      <span>Word Cloud</span>
+                    </a>
+                  </li> 
+				        
+                  <li>
+				  	<a class="" href="distribution">
+                      <i class="icon_piechart"></i>
+                      <span>Data Distribution</span>
+                    </a>
+                  </li>
+				  
+                  <li>
+                      <a class="" href="reviews">
+                          <i class="icon_search-2"></i>
+                          <span>Reviews</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="checkins">
+                          <i class="social_share"></i>
+                          <span>Checkins</span>
+                          
+                      </a>
+                                         
+                  </li>
+                             
+                  <li >
+                      <a href="ratings" class="">
+                          <i class="icon_star"></i>
+                          <span>Ratings</span>
+                      </a>
+                  </li>
+				  
+				  <li >
+                      <a href="streaming" class="">
+                          <i class="icon_link"></i>
+                          <span>Streaming</span>
+                      </a>
+                  </li>
+                  
+                  <li>
+                      <a href="aboutus" class="">
+                          <i class="icon_group"></i>
+                          <span>About Us</span>
+                          
+                      </a>
+                      
+                  </li>
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->      
+      <section id="main-content">
+        <section class="wrapper">
+		<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class=""></i>Word Cloud</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="icon_cloud_alt"></i>Word Cloud</li>
+						
+					</ol>
+				</div>
+			</div>
+            <div class="row">
+              <!-- chart morris start -->
+              <div class="col-lg-12">
+                  <section class="panel">
+                      
+                      <div class="panel-body">
+                        <div class="tab-pane" id="chartjs">
+						
+						
+						
+						
+                      <div class="row">
+					  
+					  <div class="col-lg-3">
+					  <section class="panel">
+                          <header class="panel-heading">
+                              Businesses
+                          </header>
+                          <div class="list-group">
+                              <a id="Uber" class="list-group-item " href="#" draggable="true" ondragstart="drag(event)">Uber</a>
+                              <a id="IndianBBQ" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Indian BBQ</a>
+                              <a id="Subway" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Subway</a>
+                              <a id="VickyDiner" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Vicky Diner</a>
+                              <a id="Starbucks" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Starbucks</a>
+                              <a id="GreekCafe" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >GreekCafe</a>
+                              <a id="MimiBoutique" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Mimi Boutique</a>
+                              <a id="Wang" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Wang's Kitchen</a>
+                              <a id="Marvel" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Marvel</a>
+                              <a id="OpaLife" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Opa Life</a>
+                              <a id="BananaLeaf" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Banana Leaf</a>
+                              
+                              <a id="Lift" class="list-group-item " href="#" draggable="true" ondragstart="drag(event)">Lift</a>
+                              <a id="TiaSalon" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >TiaSalon</a>
+                              <a id="KFC" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >KFC</a>
+                              <a id="Denny" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Denny's</a>
+                              <a id="Walmart" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Walmart</a>
+                              <a id="Pete" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Pete</a>
+                              <a id="Target" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Target</a>
+                              <a id="WilsonLeather" class="list-group-item" href="#" draggable="true" ondragstart="drag(event)" >Wilson Leather</a>
+                              
+                             <!-- <a class="list-group-item" href="javascript:;">Praesent tempus eleifend risus</a>
+                              <a class="list-group-item" href="javascript:;">Porta ac consectetur ac</a>
+                              <a class="list-group-item" href="javascript:;">Vestibulum at eros</a>
+                              <a class="list-group-item" href="javascript:;">Vestibulum at eros</a> -->
+                          </div>
+                      </section>
+					  </div>
+					  
+                                       
+                          <!-- Bar -->
+                          <div class="col-lg-9">
+                              <section class="panel">
+                                  <header class="panel-heading" id="Business_Name">
+                                      
+                                  </header>
+                                  <div  id="wordcloud" class="panel-body text-center" style="height:300px;width:auto;" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                      <!-- <canvas height="300" width="500"></canvas> -->
+                                  </div>
+                              </section>
+                          </div>
+						  
+                      </div>
+                      
+                  </div>
+                      </div>
+                      </div>
+                    </section>
+              </div>
+              <!-- chart morris start -->
+            </div>
+      </section>
+      <!--main content end-->
+    </section>
+    <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- chartjs -->
+    <script src="assets/chart-master/Chart.js"></script>
+    <!-- custom chart script for this page only-->
+    <script src="js/chartjs-custom.js"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+    <!-- word_cloud specific scripts -->
+    <script src="js/word_cloud/jquery.awesomeCloud-0.2.js"></script>
+    <script src="js/word_cloud/jquery.awesomeCloud-0.2.min.js"></script>
+    <script src="js/word_cloud/word_cloud.js"></script>
+     
+    
+
+  </body>
+</html>
